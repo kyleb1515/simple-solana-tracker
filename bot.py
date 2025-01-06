@@ -1,6 +1,6 @@
 from solders.keypair import Keypair
 from solders.pubkey import Pubkey
-from solana_sdk.rpc.api import Client  # Changed this line
+from solana.rpc.api import Client
 import time
 import os
 from dotenv import load_dotenv
