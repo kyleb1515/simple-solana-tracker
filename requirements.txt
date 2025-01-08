@@ -1,3 +1,2 @@
 solana-sdk
 solders
-python-dotenv
