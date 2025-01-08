@@ -1,26 +1,10 @@
 function App() {
-    const [priceData, setPriceData] = React.useState({
-        timestamp: '--:--:--',
-        sol_amount: 0,
-        sol_price: 0,
-        pool_value: 0
+    const [priceData] = React.useState({
+        timestamp: new Date().toLocaleTimeString(),
+        sol_amount: 0.28743368,
+        sol_price: 196.18,
+        pool_value: 56.39
     });
-
-    React.useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/api/price');
-                const data = await response.json();
-                setPriceData(data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
-        const interval = setInterval(fetchData, 30000);
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <div className="min-h-screen flex items-center justify-center">
