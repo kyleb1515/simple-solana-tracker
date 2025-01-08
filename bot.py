@@ -1,6 +1,4 @@
 from solders.pubkey import Pubkey
-from solders.rpc.config import RpcConfig
-from solders.rpc.requests import GetAccountInfo
 import requests
 import time
 from datetime import datetime
